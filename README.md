@@ -1,3 +1,3 @@
-# Java implementation of the C4.5 and Naïve Bayesian classifier algorithms
+# Java implementation of C4.5 & Naïve Bayesian classifiers
 
 [Should explain how to compile/run the program]
