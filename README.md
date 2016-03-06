@@ -1,6 +1,8 @@
 # classification-algorithms
 C4.5, Naïve Bayesian classifiers
 
+hi
+
 Naive: Pseudo 
 1) Input information List<List<Char>> 
 2) Create a Map   Key = (column/attribute number) + key.  The value in the map will indicate count
