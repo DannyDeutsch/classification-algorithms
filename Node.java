@@ -8,6 +8,7 @@ public class Node
 		boolean[] visited;
 		HashMap<Key, ValuePair> hm;		//TODO
 		double info;
-		Node parent;
+		Node parent
+		List<List<String>> itemList;
 	}
 }
