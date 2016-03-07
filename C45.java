@@ -1,9 +1,21 @@
 public class C45
 {
 	/* Given training data, generates decision tree */
-	private void c45()
+	public void c45()
 	{
-		// BASE CASES
+		
+	}
+
+
+	private double calcGainRatio()
+	{
+		double gain_ratio;
+
+		return gain_ratio;
+	}
+
+
+// BASE CASES
 		// If the samples in the list belong to the same class:
 		// 		> create a leaf node for the decision tree saying to choose that class.
 		// If none of the features provide any information gain, OR instance of previously-unseen class encountered:
@@ -16,7 +28,8 @@ public class C45
 		// Create a decision node that splits on a_best
 		
 		// Recur on the sublists obtained by splitting on a_best, and add those nodes as children of node
-	}
+
+
 
 
 

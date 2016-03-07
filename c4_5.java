@@ -50,7 +50,7 @@ createChildren( int attributeNum){    // this might need to be in the method abo
 
 
 
---------
+
 
 double calculateInfo(HashMap data) {
       double info = 0.0;
