@@ -1,25 +1,27 @@
+import java.util.*;
+
+
 public class C45
 {
 	/* Given training data, generates decision tree */
 	public void c45()
 	{
-		
+		// Create root node, populating it with List<List<String>>
 	}
 
 
-	private double calcGainRatio()
+	private double calcGainRatio(HashMap)
 	{
 		double gain_ratio;
 
 		return gain_ratio;
 	}
 
+	private findABest
+
 
 // BASE CASES
 		// If the samples in the list belong to the same class:
-		// 		> create a leaf node for the decision tree saying to choose that class.
-		// If none of the features provide any information gain, OR instance of previously-unseen class encountered:
-		// 		> create a decision node higher up the tree using the expected value of the class.
 
 		// For each attribute a, find the normalized information gain ratio from splitting on a
 

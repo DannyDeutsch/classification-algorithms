@@ -1,35 +1,44 @@
 
 
 initiateTree()
- while ( ! stack.isEmpty)       // this hold unfinished nodes
+ while (!stack.isEmpty)       // this hold unfinished nodes
  
     node= stack.pop  
-    double attribute_info [];
+    double attribute_info []; //information gain for each attribute
     List<HashMap<key, ValuePair<key_edible_count, key_total_count>>> filter; // list of all attribute and attributes key in hashmap
-    for( int i = 0; node.visitedAttributes) {       // this is possible attributes that can follow current node
-         
-          if(!visitedAttributes[i]) {
+    
+    for( int i = 0; node.visitedAttributes) // iterating thru attributes not yet visited (stored in node)
+    {
+          if(!visitedAttributes[i])
+          {
               double info = 0.0;
-              for(int j =0; node.ListItems.size()){
-              
-                  if(!filter.get(i).containsKey( ListItems.get(j))){        // item[i] is the column
+
+              /* Populating edible_count and total_count */
+              for(int j =0; node.ListItems.size())
+              {
+                  // If HM doesn't have this item, put it in there with ValuePair(0,0)
+                  if(!filter.get(i).containsKey( ListItems.get(j)))
+                  {        // item[i] is the column
                     New ValuePair vp = new ValuePair<listItems.get(j), 0>
                     filter.get(i).put(ListItems.get(j), 
-                    }
+                  }
                     
-                  updateKeyCount();       // change hashmap value pair based on key (item[j].get()
-                  updateKeyEdibleCount();  // change edible count check item[j].get(column:0)
+                  ValuePair.setEdibleCount(getEdibleCount()++);        // change hashmap value pair based on key (item[j].get()
+                  ValuePair.setTotalCount(getTotalCount++);  // change edible count check item[j].get(column:0)
                 }
                 
                 
-                attribute_info[i] = calculateInfo(i);  // calculate the info from this attribute
+                // calculate the info from this attribute
+                attribute_info[i] = calculateInfo(i);
            
-            } // this is end of first for loop
+            }
               // now we have a List of HashMaps that contian their attribute's keys and edible counts and total count
               
-              int childrenMaker = findAttribute(node.getInfo(), attribute_info);      // iterate through list 'filter'  find highest gain ratio
+              // iterate through list 'filter' to find highest gain ratio
+              int childrenMaker = findAttribute(node.getInfo(), attribute_info);
               
-              createChildren(filter.get(childrenMaker);  // create child nodes update childNode visited and childNode.list
+              // create child nodes update childNode visited and childNode.list
+              createChildren(filter.get(childrenMaker);
               }
 }}
 METHODS 
@@ -62,7 +71,6 @@ double calculateInfo(HashMap data) {
 return info
   }
   
-  ----------
  int  findAttribute( Double parentInfo, Double [] allInfo){
  int best = 0;
  double max = 0.0;
@@ -75,38 +83,3 @@ return info
                 }
                 return best;
  }
----------
-
-
-
-Classes
-
-------------
-Class Node{
-int columnNum;
-boolean [] visited;
-HashMap< K, ValuePair>;
-double info;
-Node parent;
-}
-
---------------
-
-Class ValuePair{
-int edibleCount
-int totalCount
-
-Set_edibleCount()
-Set_totalCount()
-
-get_edibleCount()
-get_totalCount()
-
-}
-
-
-
-
-
-
-

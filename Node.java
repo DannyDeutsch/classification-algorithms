@@ -5,7 +5,7 @@ public class Node
 	public Node()
 	{
 		int columnNum;
-		boolean [] visited;
+		boolean[] visited;
 		HashMap<Key, ValuePair> hm;		//TODO
 		double info;
 		Node parent;
