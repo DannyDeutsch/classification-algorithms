@@ -4,9 +4,9 @@ public class ValuePair
 	private int totalCount;
 
 	//TODO
-	public ValuePair()
+	public ValuePair(int edible, int total)
 	{
-		
+	set(edible, total);	
 	}
 
 
@@ -25,6 +25,12 @@ public class ValuePair
 
 
 	/* Setters */
+
+	public void set(int x, int y){
+	
+		this.edibleCount= x;
+		this.totalCount = y;
+	}
 	public void setEdibleCount(int edibleCount)
 	{
 		this.edibleCount = edibleCount;
