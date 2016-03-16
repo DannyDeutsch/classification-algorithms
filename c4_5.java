@@ -131,8 +131,9 @@ public void build(){
 	
 	}
 }
-	public void printInfo() throws Exception {
-    	PrintWriter  output = new PrintWriter("/Users/robertlantry/Documents/cs378/project2/done.txt");
+	public ArrayList<String> printInfo() throws Exception {
+    	ArrayList<String> out = new ArrayList<String>();
+ //   	PrintWriter  output = new PrintWriter("/Users/robertlantry/Documents/cs378/project2/done.txt");
     	int correct =0;
     	for(ArrayList<String> x : testMushrooms){
     		Node hold = root;
@@ -147,22 +148,26 @@ public void build(){
     	
     			}
     			if (hold.finishCase == 1) {
-    					if(x.get(0).equals("e")) {
-    						correct +=1;
-    						output.println(x.get(0) +"e");	}
+    				out.add(x.get(0));
+   // 					if(x.get(0).equals("e")) {
+    //						correct +=1;
+    //						output.println(x.get(0) +"e");	}
     			}
     			if (hold.finishCase == 2) {
-    					if(x.get(0).equals("p"))
-    						 correct +=1;
-    						output.println(x.get(0) + "p");	}
+    					out.add(x.get(0));
+    //					if(x.get(0).equals("p"))
+    //						 correct +=1;
+    //						output.println(x.get(0) + "p");	
+    				}
 
 
     			
     		 	
 
 	}
-	output.println(((double) correct/(double)testMushrooms.size()));
-	output.close();
+//	output.println(((double) correct/(double)testMushrooms.size()));
+//	output.close();
+	return out;
 }
 
 
